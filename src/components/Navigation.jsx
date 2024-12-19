@@ -1,34 +1,56 @@
-// import PropTypes from 'prop-types'
-import  { Component } from 'react'
+import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Navigation extends Component {
-  static propTypes = {}
-
   render() {
     return (
       <div>
-              <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">ClarityQuest</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav  my-2 my-lg-0" style={{ maxHeight: '100px' }}>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="/">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link mx-3" href="/about">About</a>
-              </li>
-              
-            </ul>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div className="container-fluid">
+            <Link className="navbar-brand fw-bold fs-3 text-white" to="/">
+              ClarityQuest
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarScroll">
+              <ul className="navbar-nav my-2 my-lg-0 mx-auto">
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav " to="/">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/business">Business</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/entertainment">Entertainment</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/health">Health</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/science">Science</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/sports">Sports</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/technology">Technology</Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       </div>
-    )
+    );
   }
 }
 
-export default Navigation
+export default Navigation;

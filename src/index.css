@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.hover-nav {  border-bottom: 1px transparent; }
+.navbar-brand:hover,.hover-nav:hover { color: #ffcc00 !important; }
+.hover-nav:hover { border-bottom:1px solid #ffcc00; }
