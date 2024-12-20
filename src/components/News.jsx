@@ -13,6 +13,7 @@ static defaultProps={
 static propTypes={
   country:PropTypes.string,
   category:PropTypes.string,
+  apiKey:PropTypes.string,
   pageSize:PropTypes.number,
   setProgress: PropTypes.func.isRequired,
 }
@@ -31,8 +32,7 @@ constructor(props) {
 }
 async updateNews() {
   this.props.setProgress(0);
-  const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=1c62f150cb4140b7b9a108612c790af3&page=${this.state.page}&pageSize=${this.props.pageSize}`;
-  // const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ed127803c3994c55b80ad4f8a26bd216&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+  const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
   this.setState({ loading: true });
   let data = await fetch(url);
   this.props.setProgress(10);
