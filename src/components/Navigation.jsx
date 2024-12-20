@@ -1,18 +1,20 @@
-import { Component } from 'react';
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-export class Navigation extends Component {
-  render() {
+export const Navigation =()=> {
+  const handleNavClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
     return (
       <div className='sticky-top'>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary  " >
-          <div className="container-fluid">
-            <Link className="navbar-brand ms-2 fw-bold fs-3 text-white" to="/">
+        <nav className='navbar navbar-expand-lg navbar-dark bg-primary  ' >
+          <div className='container-fluid'>
+            <Link className='navbar-brand ms-2 fw-bold fs-3 text-white' to="/" onClick={handleNavClick}>
               ClarityQuest
             </Link>
             <button
-              className="navbar-toggler"
-              type="button"
+              className='navbar-toggler'
+              type='button'
               data-bs-toggle="collapse"
               data-bs-target="#navbarScroll"
               aria-controls="navbarScroll"
@@ -24,25 +26,25 @@ export class Navigation extends Component {
             <div className="collapse navbar-collapse" id="navbarScroll">
               <ul className="navbar-nav my-2 my-lg-0 mx-auto">
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav " to="/">Home</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav " to="/" onClick={handleNavClick}>Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/business">Business</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/business" onClick={handleNavClick}>Business</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/entertainment">Entertainment</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/entertainment" onClick={handleNavClick}>Entertainment</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/health">Health</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/health" onClick={handleNavClick}>Health</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/science">Science</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/science" onClick={handleNavClick}>Science</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/sports">Sports</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/sports" onClick={handleNavClick}>Sports</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/technology">Technology</Link>
+                  <Link className="nav-link text-white mx-3 fw-bold hover-nav" to="/technology" onClick={handleNavClick}>Technology</Link>
                 </li>
               </ul>
             </div>
@@ -50,7 +52,7 @@ export class Navigation extends Component {
         </nav>
       </div>
     );
-  }
+
 }
 
 export default Navigation;

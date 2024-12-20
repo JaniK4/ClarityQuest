@@ -10,8 +10,11 @@
 .hover-nav:hover { border-bottom:1px solid #ffcc00;}
 
 h1{
-    text-shadow: 0 3px 3px #725505;
+    text-shadow: 3px 3px 3px #725505;
     color:  #f29102 !important;
 }
-.card{ box-shadow: 0px 3px 5px  rgb(120, 120, 170); }
-.card:hover{ box-shadow: 0px 10px 10px  rgb(120, 120, 170); }
+.card{ box-shadow: 4px 4px 6px  rgb(120, 120, 170); }
+.card:hover{ 
+    box-shadow: 12px 12px 9px  rgb(120, 120, 170); 
+    scale: 1.05;
+}
