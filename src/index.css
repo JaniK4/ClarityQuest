@@ -3,7 +3,15 @@
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
     font-style: normal;
+    transition: all 0.3s ease-in-out;
 }
 .hover-nav {  border-bottom: 1px transparent; }
 .navbar-brand:hover,.hover-nav:hover { color: #ffcc00 !important; }
-.hover-nav:hover { border-bottom:1px solid #ffcc00; }
+.hover-nav:hover { border-bottom:1px solid #ffcc00;}
+
+h1{
+    text-shadow: 0 3px 3px #725505;
+    color:  #f29102 !important;
+}
+.card{ box-shadow: 0px 3px 5px  rgb(120, 120, 170); }
+.card:hover{ box-shadow: 0px 10px 10px  rgb(120, 120, 170); }

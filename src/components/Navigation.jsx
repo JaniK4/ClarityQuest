@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 export class Navigation extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className='sticky-top'>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary  " >
           <div className="container-fluid">
-            <Link className="navbar-brand fw-bold fs-3 text-white" to="/">
+            <Link className="navbar-brand ms-2 fw-bold fs-3 text-white" to="/">
               ClarityQuest
             </Link>
             <button
