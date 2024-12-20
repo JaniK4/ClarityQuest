@@ -16,7 +16,7 @@ const App = () => {
         height={2}
         progress={progress}
         shadow={true}
-        transitionTime={300} // Smooth transition
+        transitionTime={300} 
       />
       <Navigation />
       <Routes>

@@ -9,7 +9,6 @@ export class NewsItems extends Component {
     const imageSrc = (imageUrl && imageUrl.trim() !== "") ? imageUrl : 'https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/07/oneplus-12r-review-05-1.jpg';
     return (
       <div className="my-3">
-        {/* <div className="card p-0 text-center w-100" > */}
         <div className="card p-0  " style={{width:'18rem', height:'29rem'}}>
           <img src={imageSrc} alt="Article" className="rounded img-fluid" style={{ height: '10rem' }} 
             onError={this.handleImageError}
